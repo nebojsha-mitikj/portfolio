@@ -8,7 +8,7 @@
   const navbarDefault = ref(null);
 
   const pages = ref([
-    {name: 'home', path: '/'},
+    {name: 'about', path: '/'},
     {name: 'experience', path: '/experience'},
     {name: 'projects', path: '/projects'},
     {name: 'contact', path: '/contact'},
@@ -35,8 +35,9 @@
   <nav class="bg-zinc-900">
     <div class="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-4">
       <RouterLink to="/" class="flex items-center">
+
         <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
-          Nebojsha
+           Nebojsha
         </span>
       </RouterLink>
       <button @click="toggleNavbar" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-zinc-400 hover:bg-zinc-700 focus:ring-zinc-600" aria-controls="navbar-default" aria-expanded="false">
