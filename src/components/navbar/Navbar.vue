@@ -3,7 +3,7 @@
   import { RouterLink } from 'vue-router';
   import { ref } from 'vue';
 
-  const navItem = 'block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 md:hover:text-emerald-500';
+  const navItem = 'block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 md:hover:text-sky-500 font-semibold';
 
   const navbarDefault = ref(null);
 
@@ -32,11 +32,11 @@
 </script>
 
 <template>
-  <nav class="bg-zinc-900">
+  <nav class="bg-zinc-900 select-none">
     <div class="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-4">
       <RouterLink to="/" class="flex items-center">
 
-        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+        <span class="self-center text-2xl whitespace-nowrap text-white font-bold transform hover:scale-105 transition duration-200">
            Nebojsha
         </span>
       </RouterLink>
@@ -51,7 +51,7 @@
 
           <li v-for="page in pages" :key="page.name">
             <RouterLink @click="collapseNavbar" :to="page.path" :class="{
-              'text-emerald-500': $route.name === page.name,
+              'text-sky-500': $route.name === page.name,
               'text-white': $route.name !== page.name,
               [navItem]: true
             }">
