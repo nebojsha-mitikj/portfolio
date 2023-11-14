@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {onBeforeMount, computed} from 'vue'
-import {useRoute, useRouter} from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useProjects } from './../assets/composables/projects.js';
 
 const { getProject } = useProjects();
@@ -43,14 +43,18 @@ onBeforeMount(() => {
       Aenean scelerisque nisl ut tortor varius, id fringilla orci eleifend. Fusce ultricies elit nec.
     </p>
 
-    <div class="text-center mt-6 hover:scale-110 transition duration-200">
-      <a
-          :href="project.site"
-          target="_blank"
-          class="py-2 select-none px-4 sm:text-xl text-lg rounded-2xl text-white bg-sky-600 hover:bg-sky-700"
-      >
-        Visit site 👉
-      </a>
+    <div class="text-center">
+      <div class="inline-block transition duration-100 hover:scale-105 my-8">
+        <a
+            :href="project.site"
+            target="_blank"
+            class="
+          border border-zinc-700 hover:border-sky-500 select-none sm:px-16 px-10 sm:py-3 py-2
+          text-lg rounded-lg font-semibold"
+        >
+          Visit Site <font-awesome-icon class="ml-2 mb-[-1px]" :icon="['fas', 'arrow-right']" />
+        </a>
+      </div>
     </div>
 
   </div>

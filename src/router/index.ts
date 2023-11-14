@@ -11,18 +11,27 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'about',
-      component: HomeView
+      name: 'home',
+      component: HomeView,
+      meta: {
+        title: 'Home'
+      }
     },
     {
       path: '/experience',
       name: 'experience',
-      component: ExperienceView
+      component: ExperienceView,
+      meta: {
+        title: 'Experience'
+      }
     },
     {
       path: '/projects',
       name: 'projects',
-      component: ProjectsView
+      component: ProjectsView,
+      meta: {
+        title: 'Projects'
+      }
     },
     {
       path: '/projects/:project',
@@ -32,9 +41,17 @@ const router = createRouter({
     {
       path: '/contact',
       name: 'contact',
-      component: ContactView
+      component: ContactView,
+      meta: {
+        title: 'Contact'
+      }
     }
   ]
+})
+
+router.beforeEach((toRoute, fromRoute, next) => {
+  window.document.title = toRoute.meta && toRoute.meta.title ? toRoute.meta.title + ' - Nebojsha' : 'Nebojsha';
+  next();
 })
 
 export default router
