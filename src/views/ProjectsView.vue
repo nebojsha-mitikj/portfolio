@@ -27,7 +27,7 @@
           sm:col-span-6 col-span-12 flex items-center sm:mt-0
         " :class="{'mt-16': index !== 0, 'mt-4': index === 0}">
           <RouterLink :to="'projects/'+project.title.toLowerCase()" class="w-full">
-            <img :src="project.image" alt="todo" class="rounded cursor-pointer sm:w-[90%] w-[100%] mx-auto">
+            <img :src="project.image" alt="todo" class="rounded shadow-lg shadow-sky-500 cursor-pointer sm:w-[90%] w-[100%] mx-auto">
           </RouterLink>
         </div>
         <div class="sm:col-span-6 col-span-12 flex flex-col justify-center">
