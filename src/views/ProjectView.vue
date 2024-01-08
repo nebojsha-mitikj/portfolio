@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import {onBeforeMount, computed} from 'vue'
+import {onBeforeMount, computed, ref} from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useProjects } from './../assets/composables/projects.js';
+import MyImage from "@/components/assets/MyImage.vue";
 
 const { getProject } = useProjects();
 let project = null;
@@ -27,7 +28,8 @@ onBeforeMount(() => {
     <p class="mt-4 sm:text-lg">
       {{ project.description }}
     </p>
-    <img :src="project.image" alt="todo" class="rounded w-[100%] my-8 mx-auto">
+
+    <my-image :src="project.image" :alt="'Header image'"></my-image>
 
     <h2 class="sm:text-4xl text-2xl font-bold">First header</h2>
     <p class="mt-4 sm:text-lg">
@@ -49,7 +51,7 @@ onBeforeMount(() => {
             :href="project.site"
             target="_blank"
             class="
-          border border-zinc-700 hover:border-sky-500 select-none sm:px-16 px-10 sm:py-3 py-2
+          border-2 border-zinc-600 hover:border-sky-500 select-none sm:px-16 px-10 sm:py-3 py-2
           text-lg rounded-lg font-semibold"
         >
           Visit Site <font-awesome-icon class="ml-2 mb-[-1px]" :icon="['fas', 'arrow-right']" />

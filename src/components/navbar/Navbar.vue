@@ -36,7 +36,7 @@
     <div class="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-4">
       <RouterLink to="/" class="flex items-center">
 
-        <span class="self-center text-2xl whitespace-nowrap text-white font-semibold transform hover:scale-105 transition duration-200">
+        <span class="self-center text-2xl whitespace-nowrap text-white font-semibold">
            Nebojsha
         </span>
       </RouterLink>
@@ -47,7 +47,7 @@
         </svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default" ref="navbarDefault">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-zinc-900 md:bg-zinc-950 border-zinc-700">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-zinc-900 md:bg-zinc-900 border-zinc-700">
           <li v-for="page in pages" :key="page.name">
             <RouterLink @click="collapseNavbar" :to="page.path" :class="{
               'text-sky-500': $route.name === page.name || page.name === 'projects' && $route.name === 'project',

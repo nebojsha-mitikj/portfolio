@@ -43,6 +43,7 @@ import MyBadge from "@/components/assets/MyBadge.vue";
           <MyBadge>SQL</MyBadge>
           <MyBadge>MongoDB</MyBadge>
           <MyBadge>AWS</MyBadge>
+          <MyBadge>Docker</MyBadge>
           <MyBadge>Linux</MyBadge>
         </div>
       </div>

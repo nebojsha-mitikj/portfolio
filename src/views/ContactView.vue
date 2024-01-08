@@ -19,7 +19,7 @@
             type="text"
             autocomplete="on"
             class="border rounded-lg w-full bg-zinc-900
-              border-zinc-700 text-white focus:ring-sky-500 focus:border-sky-500">
+              border-zinc-600 text-white focus:ring-sky-500 focus:border-sky-500">
       </div>
       <div class="sm:col-span-6 col-span-12">
         <label for="email" class="mb-1 block text-white">
@@ -30,7 +30,7 @@
             type="email"
             autocomplete="on"
             class="border rounded-lg w-full bg-zinc-900
-              border-zinc-700 text-white focus:ring-sky-500 focus:border-sky-500">
+              border-zinc-600 text-white focus:ring-sky-500 focus:border-sky-500">
       </div>
       <div class="col-span-12">
         <label for="subject" class="mb-1 block text-white">
@@ -41,22 +41,22 @@
             type="text"
             autocomplete="off"
             class="border rounded-lg w-full bg-zinc-900
-              border-zinc-700 text-white focus:ring-sky-500 focus:border-sky-500">
+              border-zinc-600 text-white focus:ring-sky-500 focus:border-sky-500">
       </div>
 
       <div class="col-span-12">
         <label for="message" class="mb-1 block text-white">
           Your message
         </label>
-        <textarea id="message" rows="6" class="resize-none w-full rounded-lg border border-zinc-700 bg-zinc-900 text-white focus:ring-sky-500 focus:border-sky-500"></textarea>
+        <textarea id="message" rows="6" class="resize-none w-full rounded-lg border border-zinc-600 bg-zinc-900 text-white focus:ring-sky-500 focus:border-sky-500"></textarea>
       </div>
     </div>
 
     <div class="text-center">
-      <div class="inline-block transition duration-100 hover:scale-105 my-5">
+      <div class="inline-block my-5">
         <button
             class="
-          border border-zinc-700 hover:border-sky-500 select-none sm:px-16 px-10 sm:py-3 py-2
+          border-[2px] border-zinc-600 hover:border-sky-500 select-none sm:px-16 px-10 sm:py-3 py-2
           text-lg rounded-lg font-semibold"
         >
           Send Message <font-awesome-icon class="ml-2 mb-[-1px]" :icon="['fas', 'arrow-right']" />
