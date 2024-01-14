@@ -2,10 +2,35 @@
 import MyBadge from "@/components/assets/MyBadge.vue";
 import { useExperience } from './../assets/composables/experience.js';
 const { experience } = useExperience();
+
+const monthsDiff = (d1: Date, d2: Date): number => {
+  let monthsDiff = (d2.getFullYear() - d1.getFullYear()) * 12 + d2.getMonth() - d1.getMonth();
+  if (d2.getDate() > d1.getDate()) ++monthsDiff;
+  return monthsDiff;
+}
+
+const timeString = (d1: Date) => {
+  return `${new Intl.DateTimeFormat('en', { month: 'short' }).format(d1)} ${d1.getFullYear()}`;
+}
+
+const totalTimeString = (d1: Date, d2: Date): string => {
+  let monthsCount = monthsDiff(d1, d2);
+  let totalYears = Math.floor(monthsCount / 12);
+  let leftMoths = monthsCount % 12;
+  return (totalYears > 0 ? totalYears + ' yrs ' : '') + (leftMoths > 0 ? leftMoths + ' mos ' : '');
+}
+
+const timeDifference = (start: string, end: string | null): string => {
+  let d1 = new Date(start);
+  let d2 = new Date(end ? end : new Date().toISOString().slice(0, 10));
+  return `${timeString(d1)} - ${end == null ? 'Present' : timeString(d2)} · ${totalTimeString(d1, d2)}`
+}
+
 </script>
 
 <template>
   <div class="max-w-2xl w-[92%] text-white mx-auto pb-14 sm:mt-[5%] mt-[8%]">
+
     <h1 class="text-center sm:text-4xl mt-4 text-2xl font-bold">
       Skills & Experience.
     </h1>
@@ -45,7 +70,7 @@ const { experience } = useExperience();
               <div class="col-span-12 sm:col-span-10 text-center sm:text-left">
                 <p class="font-semibold">{{ data.title}}</p>
                 <p class="text-gray-200">{{ data.company }}</p>
-                <p class="text-gray-400">{{  data.time }}</p>
+                <p class="text-gray-400">{{  timeDifference(data.start, data.end) }}</p>
                 <p class="text-gray-400">{{ data.location }}</p>
                 <p class="text-gray-200 mt-2 max-w-sm sm:max-w-full mx-auto"><span class="font-semibold">Skills:</span> {{ data.skills }} </p>
               </div>
