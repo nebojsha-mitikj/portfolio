@@ -5,22 +5,16 @@ import {RouterLink} from 'vue-router';
 <template>
   <div class="max-w-2xl w-[92%] text-white mx-auto pb-14 sm:mt-[3%] mt-[8%]">
 
-    <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-60 h-60 object-cover rounded-full mx-auto">
+    <img src="/images/me/nebojsha.jpg" alt="Image of Nebojsha" class="w-60 h-60 object-cover rounded-full mx-auto">
 
     <h1 class="text-center sm:text-4xl mt-4 text-2xl font-bold">
-      Hello, I'm Nebojsha. <br>I'm a full-stack web developer.
+      Hi, I'm Nebojsha. <br>I'm a full-stack web developer.
     </h1>
 
     <p class="mt-4 sm:text-lg">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla, ex ac
-      euismod cursus, mauris libero.
+      Based in Ohrid, Macedonia, I'm a developer with over four years of experience. Proficient in PHP and JavaScript, I turn ideas into reality with seamless and clean code. Let's team up on exciting projects – explore my work.
     </p>
 
-    <p class="mt-4 sm:text-lg">
-      Suspendisse potenti. Quisque in libero eu magna suscipit ullamcorper.
-      Sed non ligula vel dolor blandit commodo. Proin vel sapien vel velit sollicitudin consequat.
-      Integer tristique urna ut erat suscipit, a gravida orci laoreet.
-    </p>
 
     <div class="text-center">
       <div class="inline-block my-8">

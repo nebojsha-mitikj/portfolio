@@ -14,9 +14,7 @@
       </h1>
 
       <p class="mt-4 sm:text-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio id libero consectetur
-        fringilla. Quisque sollicitudin justo non tincidunt feugiat. Sed ut augue at justo consectetur
-        scelerisque. Proin sed urna quis lectus vestibulum eleifend.
+        A glimpse into my portfolio, highlighting a variety of projects that reflect my expertise and creativity in the world of development.
       </p>
     </div>
 
