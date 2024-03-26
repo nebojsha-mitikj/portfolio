@@ -1,0 +1,17 @@
+{
+    "name": "nebbo/portfolio",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nebojsha",
+            "email": "nebojsha.97.mitikj@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/mailer": "^7.0"
+    }
+}
