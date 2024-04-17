@@ -17,6 +17,8 @@ const message = ref('');
 
 const isSuccess = ref(true);
 
+const requestIsActive = ref(false);
+
 const errors = ref({});
 
 const clear = (): void => {
@@ -27,6 +29,7 @@ const clear = (): void => {
 
 const sendMessage = (): void => {
   clear();
+  requestIsActive.value = true;
   ContactService.sendMessage(messageData.value)
       .then((response: ResponseData) => {
         message.value = response.data.message;
@@ -38,6 +41,8 @@ const sendMessage = (): void => {
     if (error?.response?.data?.message) {
       message.value = error.response.data.message;
     }
+  }).finally(() => {
+    requestIsActive.value = false;
   });
 }
 
@@ -64,7 +69,7 @@ const sendMessage = (): void => {
             id="name"
             type="text"
             v-model="messageData.name"
-            autocomplete="on"
+            autocomplete="off"
             class="border rounded-lg w-full bg-zinc-900
               border-zinc-600 text-white focus:ring-sky-500 focus:border-sky-500">
       </div>
@@ -76,7 +81,7 @@ const sendMessage = (): void => {
             id="email"
             type="email"
             v-model="messageData.email"
-            autocomplete="on"
+            autocomplete="off"
             class="border rounded-lg w-full bg-zinc-900
               border-zinc-600 text-white focus:ring-sky-500 focus:border-sky-500">
       </div>
@@ -125,6 +130,7 @@ const sendMessage = (): void => {
     <div class="text-center">
       <div class="inline-block my-5">
         <button
+            :disabled="requestIsActive"
             @click="sendMessage"
             class="
           border-[2px] border-zinc-600 hover:border-sky-500 select-none sm:px-16 px-10 sm:py-3 py-2
