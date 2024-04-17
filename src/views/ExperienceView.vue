@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import MyBadge from "@/components/assets/MyBadge.vue";
-import { useExperience } from './../assets/composables/experience.js';
-const { experience } = useExperience();
+
+import MyBadge from '@/components/assets/MyBadge.vue';
+import ExperienceService from '@/services/ExperienceService';
 
 const monthsDiff = (d1: Date, d2: Date): number => {
   let monthsDiff = (d2.getFullYear() - d1.getFullYear()) * 12 + d2.getMonth() - d1.getMonth();
@@ -63,8 +63,8 @@ const timeDifference = (start: string, end: string | null): string => {
 
         <div class="mt-8">
           <div class="grid grid-cols-12 gap-y-2 gap-x-5 sm:gap-y-10">
-            <template v-for="(data, index) in experience" :key="data.company">
-              <div class="col-span-12 sm:col-span-2" :class="{'mt-10 sm:mt-0': index === experience.length - 1}">
+            <template v-for="(data, index) in ExperienceService.get()" :key="data.company">
+              <div class="col-span-12 sm:col-span-2" :class="{'mt-10 sm:mt-0': index === ExperienceService.length() - 1}">
                 <img :src="data.image" class="w-full max-w-[6rem] mx-auto" :alt="data.alt">
               </div>
               <div class="col-span-12 sm:col-span-10 text-center sm:text-left">

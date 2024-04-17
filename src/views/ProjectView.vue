@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import {onBeforeMount, computed, ref} from 'vue'
+import { onBeforeMount, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useProjects } from './../assets/composables/projects.js';
+import ProjectService from '@/services/ProjectService';
 import MyImage from "@/components/assets/MyImage.vue";
 
-const { getProject } = useProjects();
-let project = null;
+let project: any = null;
 
 const projectTitle = computed((): string => {
-  return useRoute().params.project;
+  let project: string|string[] = useRoute().params.project;
+  if (typeof project === 'string') {
+    return project;
+  }
+  return '';
 })
 
 onBeforeMount(() => {
-  project = getProject(projectTitle.value.replace('-', ' '));
+  project = ProjectService.get(projectTitle.value.replace('-', ' '));
   if (project == null) {
     useRouter().push('/projects');
   }

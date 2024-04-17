@@ -5,7 +5,7 @@
 
   const navItem = 'block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 md:hover:text-sky-500 font-semibold';
 
-  const navbarDefault = ref(null);
+  const navbarDefault = ref();
 
   const pages = ref([
     {name: 'home', path: '/'},
@@ -14,11 +14,11 @@
     {name: 'contact', path: '/contact'},
   ])
 
-  const firstCharToUpperCase = (str) : string => {
+  const firstCharToUpperCase = (str: string) : string => {
     return str[0].toUpperCase() + str.slice(1)
   }
 
-  async function toggleNavbar() : void {
+  async function toggleNavbar() : Promise<void> {
     const navbar: HTMLElement = navbarDefault.value;
     const isHidden: boolean = navbarDefault.value.classList.contains('hidden');
     isHidden ? navbar.classList.remove('hidden') : navbar.classList.add('hidden');
