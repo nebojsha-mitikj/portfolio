@@ -34,19 +34,11 @@ onBeforeMount(() => {
 
     <my-image :src="project.image" :alt="'Header image'"></my-image>
 
-    <h2 class="sm:text-4xl text-2xl font-bold">First header</h2>
-    <p class="mt-4 sm:text-lg">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio id libero consectetur
-      fringilla. Quisque sollicitudin justo non tincidunt feugiat. Sed ut augue at justo consectetur
-      scelerisque. Proin sed urna quis lectus vestibulum eleifend.
-    </p>
-    <h2 class="sm:text-4xl text-2xl font-bold mt-4">Second header</h2>
-    <p class="mt-4 sm:text-lg">
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-    </p>
-    <p class="mt-4 sm:text-lg">
-      Aenean scelerisque nisl ut tortor varius, id fringilla orci eleifend. Fusce ultricies elit nec.
-    </p>
+    <h2 class="sm:text-4xl text-2xl font-bold">Description:</h2>
+    <p class="mt-4 sm:text-lg" v-text="project.long"></p>
+
+    <h2 class="sm:text-4xl text-2xl font-bold mt-4">Built with:</h2>
+    <p class="mt-4 sm:text-lg" v-text="project.built"></p>
 
     <div class="text-center">
       <div class="inline-block transition duration-100 hover:scale-105 my-8">
