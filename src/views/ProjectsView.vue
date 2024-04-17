@@ -1,8 +1,6 @@
 <script setup lang="ts">
   import { RouterLink } from 'vue-router';
-  import { useProjects } from './../assets/composables/projects.js';
-
-  const { projects } = useProjects();
+  import ProjectService from '@/services/ProjectService';
 </script>
 
 <template>
@@ -19,7 +17,7 @@
     </div>
 
     <div class="grid grid-cols-12 gap-x-4 sm:gap-y-16 sm:pt-12 pt-4 text-left">
-      <template  v-for="(project, index) in projects" :key="project.title">
+      <template  v-for="(project, index) in ProjectService.projects" :key="project.title">
         <div class="
           sm:col-span-6 col-span-12 flex items-center sm:mt-0
         " :class="{'mt-16': index !== 0, 'mt-4': index === 0}">

@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfiles/Frontend.Dockerfile
+    image: portfolio-frontend-image
+    container_name: portfolio-frontend-container
+    networks:
+      - internal
+
+  php:
+    build:
+      context: ./
+      dockerfile: Dockerfiles/Backend.Dockerfile
+    image: portfolio-php-image
+    container_name: portfolio-php-container
+    depends_on:
+      - frontend
+    networks:
+      - internal
+    environment:
+      - SENDER_EMAIL=${SENDER_EMAIL}
+      - DSN=${DSN}
+
+  nginx:
+    build:
+      context: ./
+      dockerfile: Dockerfiles/Nginx.Dockerfile
+    image: portfolio-nginx-image
+    container_name: portfolio-nginx-container
+    ports:
+      - "8080:80"
+    depends_on:
+      - php
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+
