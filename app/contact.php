@@ -16,6 +16,13 @@ header('Access-Control-Allow-Origin: https://nebojsha.com https://www.nebojsha.c
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
+if (in_array($_SERVER['HTTP_ORIGIN'], ['https://nebojsha.com', 'https://www.nebojsha.com'])) {
+    header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+} else {
+    header('HTTP/1.1 403 Forbidden');
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     return;
 }
