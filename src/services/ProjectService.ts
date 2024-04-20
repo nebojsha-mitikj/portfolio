@@ -21,7 +21,7 @@ class ProjectService {
         },
         {
             title: 'Nebbo',
-            site: 'http://16.171.148.142/',
+            site: 'https://todo.nebojsha.com/',
             description: 'To-do app that I\'ve built for myself, inspired by the book "Deep Work" by Cal Newport.',
             long: 'Nebbo is a simple to-do app inspired by the book "Deep Work" by Cal Newport. It includes task time-blocking and three task statuses: to-do, in-progress, and finished. You may add tasks for today or tomorrow and view your task history.\n',
             built: 'Nebbo is built using Laravel/PHP and Vue.js/Javascript, with AWS for hosting.',
