@@ -12,7 +12,7 @@ use Symfony\Component\Mime\Email;
 use Valitron\Validator;
 
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: https://nebojsha.com');
+header('Access-Control-Allow-Origin: https://nebojsha.com https://www.nebojsha.com');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
