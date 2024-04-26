@@ -56,8 +56,7 @@ const sendMessage = (): void => {
 
     <p class="mt-4 sm:text-lg">
       If you're interested in chatting about a project or if you have any questions,
-      just drop me a message. I'll do my best to get back to you
-      within 24 hours. Looking forward to connecting!
+      just drop me a message. Looking forward to connecting!
     </p>
 
     <div class="grid grid-cols-12 gap-2 mt-4">
