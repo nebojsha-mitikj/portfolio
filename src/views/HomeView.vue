@@ -12,9 +12,9 @@ import {RouterLink} from 'vue-router';
     </h1>
 
     <p class="mt-4 sm:text-lg">
-      Based in Ohrid, Macedonia, I'm a developer with close to five years of experience. Proficient in PHP and
-      JavaScript, I turn ideas into reality with seamless and clean code. Let's team up on exciting projects –
-      explore my work.
+      Hello👋 I'm a developer based in Ohrid, Macedonia, with nearly five years of experience turning ideas into
+      reality through seamless and clean code. Proficient in PHP, Python, and JavaScript. Let's team up on exciting
+      projects - explore my work.
     </p>
 
     <div class="text-center">
