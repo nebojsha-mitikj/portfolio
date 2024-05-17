@@ -44,11 +44,11 @@ const timeDifference = (start: string, end: string | null): string => {
           <MyBadge>Laravel</MyBadge>
           <MyBadge>JavaScript</MyBadge>
           <MyBadge>Vue.js</MyBadge>
+          <MyBadge>Python</MyBadge>
           <MyBadge>HTML</MyBadge>
           <MyBadge>CSS</MyBadge>
           <MyBadge>Tailwind</MyBadge>
           <MyBadge>Bootstrap</MyBadge>
-          <MyBadge>Python</MyBadge>
           <MyBadge>SQL</MyBadge>
           <MyBadge>MongoDB</MyBadge>
           <MyBadge>AWS</MyBadge>
