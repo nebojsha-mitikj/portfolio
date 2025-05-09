@@ -45,15 +45,15 @@ const timeDifference = (start: string, end: string | null): string => {
           <MyBadge>JavaScript</MyBadge>
           <MyBadge>Vue.js</MyBadge>
           <MyBadge>Python</MyBadge>
-          <MyBadge>HTML</MyBadge>
-          <MyBadge>CSS</MyBadge>
+          <MyBadge>HTML & CSS</MyBadge>
           <MyBadge>Tailwind</MyBadge>
           <MyBadge>Bootstrap</MyBadge>
-          <MyBadge>SQL</MyBadge>
+          <MyBadge>MySQL</MyBadge>
           <MyBadge>MongoDB</MyBadge>
           <MyBadge>AWS</MyBadge>
           <MyBadge>Docker</MyBadge>
           <MyBadge>Linux</MyBadge>
+          <MyBadge>Design Patterns</MyBadge>
         </div>
       </div>
       <div class="col-span-12">

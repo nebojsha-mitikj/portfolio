@@ -9,6 +9,16 @@ class ExperienceService {
     get(): ExperienceData[] {
         return [
             {
+                image: '/images/logos/lifepanel.png',
+                alt: 'Lifepanel logo',
+                title: 'Full Stack Web Developer',
+                start: '2025-01-01',
+                end: null,
+                company: 'Lifepanel · Full-time',
+                location: 'Remote',
+                skills: 'PHP · Laravel · JavaScript · Vue.js · MySQL · Amazon Web Services (AWS) · Bootstrap'
+            },
+            {
                 image: '/images/logos/sales.rocks.logo.png',
                 alt: 'SalesRocks Logo',
                 title: 'Full Stack Web Developer',
@@ -27,7 +37,7 @@ class ExperienceService {
                 company: 'Sample Solutions BV · Full-time',
                 location: 'On-site',
                 skills: 'PHP · Laravel · JavaScript · Vue.js · MySQL · Amazon Web Services (AWS) · Bootstrap'
-            },
+            }
         ]
     }
 
