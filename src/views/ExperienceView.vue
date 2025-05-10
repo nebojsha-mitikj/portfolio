@@ -64,7 +64,7 @@ const timeDifference = (start: string, end: string | null): string => {
         <div class="mt-8">
           <div class="grid grid-cols-12 gap-y-2 gap-x-5 sm:gap-y-10">
             <template v-for="(data, index) in ExperienceService.get()" :key="data.company">
-              <div class="col-span-12 sm:col-span-2" :class="{'mt-10 sm:mt-0': index === ExperienceService.length() - 1}">
+              <div class="col-span-12 sm:col-span-2" :class="{'mt-10 sm:mt-0': index !== 0}">
                 <img :src="data.image" class="w-full max-w-[6rem] mx-auto" :alt="data.alt">
               </div>
               <div class="col-span-12 sm:col-span-10 text-center sm:text-left">
