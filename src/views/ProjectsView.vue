@@ -40,7 +40,7 @@
                   :to="'projects/'+project.title.replace(/\s+/g, '-').toLowerCase()"
                   class="
                       border-[2px] border-zinc-600 hover:border-sky-500 select-none px-10 py-2
-                      text-lg rounded-lg font-semibold"
+                      text-lg rounded-lg font-semibold bg-zinc-900"
               >
                 See More <font-awesome-icon class="ml-1 mb-[-1px]" :icon="['fas', 'arrow-right']" />
               </RouterLink>

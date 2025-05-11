@@ -133,7 +133,7 @@ const sendMessage = (): void => {
             @click="sendMessage"
             class="
           border-[2px] border-zinc-600 hover:border-sky-500 select-none sm:px-16 px-10 sm:py-3 py-2
-          text-lg rounded-lg font-semibold"
+          text-lg rounded-lg font-semibold bg-zinc-900"
         >
           Send Message <font-awesome-icon class="ml-2 mb-[-1px]" :icon="['fas', 'arrow-right']" />
         </button>

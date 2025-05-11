@@ -2,6 +2,12 @@
 
 import MyBadge from '@/components/assets/MyBadge.vue';
 import ExperienceService from '@/services/ExperienceService';
+import {ref} from "vue";
+
+const skills = ref<Array<string>>([
+  'PHP', 'Laravel', 'JavaScript', 'Vue.js', 'Python', 'HTML & CSS', 'Tailwind', 'Bootstrap', 'MySQL', 'MongoDB',
+  'AWS', 'Docker', 'Linux', 'Design Patterns'
+]);
 
 const monthsDiff = (d1: Date, d2: Date): number => {
   let monthsDiff = (d2.getFullYear() - d1.getFullYear()) * 12 + d2.getMonth() - d1.getMonth();
@@ -10,7 +16,7 @@ const monthsDiff = (d1: Date, d2: Date): number => {
 }
 
 const timeString = (d1: Date) => {
-  return `${new Intl.DateTimeFormat('en', { month: 'short' }).format(d1)} ${d1.getFullYear()}`;
+  return `${new Intl.DateTimeFormat('en', {month: 'short'}).format(d1)} ${d1.getFullYear()}`;
 }
 
 const totalTimeString = (d1: Date, d2: Date): string => {
@@ -40,21 +46,11 @@ const timeDifference = (start: string, end: string | null): string => {
           I'm skilled in
         </h1>
         <div class="text-left">
-          <MyBadge>PHP</MyBadge>
-          <MyBadge>Laravel</MyBadge>
-          <MyBadge>JavaScript</MyBadge>
-          <MyBadge>Vue.js</MyBadge>
-          <MyBadge>Python</MyBadge>
-          <MyBadge>HTML & CSS</MyBadge>
-          <MyBadge>Tailwind</MyBadge>
-          <MyBadge>Bootstrap</MyBadge>
-          <MyBadge>MySQL</MyBadge>
-          <MyBadge>MongoDB</MyBadge>
-          <MyBadge>AWS</MyBadge>
-          <MyBadge>Docker</MyBadge>
-          <MyBadge>Linux</MyBadge>
-          <MyBadge>Design Patterns</MyBadge>
+          <MyBadge v-for="skill in skills" :key="skill">{{ skill }}</MyBadge>
         </div>
+        <p class="mt-4 italic">
+          <span class="text-blue-500">Note:</span> While these are the core technologies I work with, I'm always open to learning new tools and frameworks to meet the needs of any project!
+        </p>
       </div>
       <div class="col-span-12">
         <h1 class="sm:text-2xl mt-4 text-xl font-bold">
@@ -68,11 +64,12 @@ const timeDifference = (start: string, end: string | null): string => {
                 <img :src="data.image" class="w-full max-w-[6rem] mx-auto" :alt="data.alt">
               </div>
               <div class="col-span-12 sm:col-span-10 text-center sm:text-left">
-                <p class="font-semibold">{{ data.title}}</p>
+                <p class="font-semibold">{{ data.title }}</p>
                 <p class="text-gray-200">{{ data.company }}</p>
-                <p class="text-gray-400">{{  timeDifference(data.start, data.end) }}</p>
+                <p class="text-gray-400">{{ timeDifference(data.start, data.end) }}</p>
                 <p class="text-gray-400">{{ data.location }}</p>
-                <p class="text-gray-200 mt-2 max-w-sm sm:max-w-full mx-auto"><span class="font-semibold">Skills:</span> {{ data.skills }} </p>
+                <p class="text-gray-200 mt-2 max-w-sm sm:max-w-full mx-auto"><span class="font-semibold">Skills:</span>
+                  {{ data.skills }} </p>
               </div>
             </template>
           </div>
