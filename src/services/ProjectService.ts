@@ -5,7 +5,7 @@ class ProjectService {
     projects: ProjectData[] = [
         {
             title: 'Drip Campaign',
-            site: 'https://app.sales.rocks',
+            site: 'https://sales.rocks/email-drip-campaigns/',
             description: 'Software for running email campaigns. It delivers statistics like email opens, link clicks, and many other features.',
             long: 'The drip campaign is part of the SalesRocks platform, and the clients use it to automate email or LinkedIn campaigns. You may create your campaigns using email or LinkedIn actions, delays, and conditions. It delivers statistics like email opens, link clicks, replies, and bounces. ',
             built: 'The drip campaign system is crafted with Laravel/PHP and Vue.js/Javascript, supplemented by Python for email reply/bounce detection, and empowered by AWS Step Functions for seamless orchestration.',
@@ -13,7 +13,7 @@ class ProjectService {
         },
         {
             title: 'Labchess',
-            site: 'https://labchess.com',
+            site: 'https://github.com/nebojsha-mitikj/lab-chess',
             description: 'Gamified app for improving your chess endgame, includes courses and puzzles.',
             long: 'Labchess is an application used for improving your chess endgame. It has close to 5000 registered users. It includes written courses and over 2000 training endgame positions that you can solve. The users may compete with each other and analyze their solutions using Stockfish, an open-source chess engine. The project includes a free and paid version. The payment is handled using Paddle.',
             built: 'Labchess is built using Laravel/PHP and Vue.js/Javascript, with AWS for hosting.',

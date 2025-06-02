@@ -40,7 +40,7 @@ onBeforeMount(() => {
     <h2 class="sm:text-4xl text-2xl font-bold mt-4">Built with:</h2>
     <p class="mt-4 sm:text-lg" v-text="project.built"></p>
 
-    <div class="text-center">
+    <div class="text-center" v-if="project.site != null">
       <div class="inline-block transition duration-100 hover:scale-105 my-8">
         <a
             :href="project.site"
