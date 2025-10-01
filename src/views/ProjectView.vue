@@ -15,7 +15,7 @@ const projectTitle = computed((): string => {
 })
 
 onBeforeMount(() => {
-  project = ProjectService.get(projectTitle.value.replace('-', ' '));
+  project = ProjectService.get(projectTitle.value.replace(/-/g, ' '));
   if (project == null) {
     useRouter().push('/projects');
   }
