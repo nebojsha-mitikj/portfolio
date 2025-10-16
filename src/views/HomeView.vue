@@ -14,7 +14,7 @@ import {RouterLink} from 'vue-router';
     <p class="mt-4 sm:text-lg">
       Hello👋 I'm a full-stack web developer based in Ohrid, Macedonia, with over six years of experience transforming
       ideas into clean, efficient, and scalable code. I specialize in PHP, Python, and JavaScript, and I'm passionate about building modern web applications using frameworks like Laravel and Vue.js. Let's team up on
-      exciting projects - explore my work.
+      exciting projects - explore my work
     </p>
 
     <div class="text-center">
