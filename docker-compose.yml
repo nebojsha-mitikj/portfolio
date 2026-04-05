@@ -30,15 +30,18 @@ services:
       context: ./
       dockerfile: Dockerfiles/Nginx.Dockerfile
     image: portfolio-nginx-image
-    container_name: portfolio-nginx-container
+    container_name: portfolio-web
     ports:
       - "8080:80"
     depends_on:
       - php
     networks:
       - internal
+      - shared-proxy
 
 networks:
   internal:
     driver: bridge
+  shared-proxy:
+    external: true
 
